@@ -1,0 +1,37 @@
+{{ define "main" }}
+<main class="site-container">
+  <div class="section-header text-center">
+    <div class="section-eyebrow">Portfolio</div>
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ with .Description }}
+      <p class="section-description">{{ . }}</p>
+    {{ end }}
+  </div>
+
+  <div class="markdown-body" style="max-width: var(--container-narrow); margin: 0 auto 3rem;">
+    {{ .Content }}
+  </div>
+
+  {{ if .Pages }}
+  <div class="archive-grid">
+    {{ range .Pages }}
+      <article class="archive-card">
+        <div class="card-body">
+          <div class="card-meta">
+            <span>{{ .Date.Format "Jan 02, 2006" }}</span>
+          </div>
+          <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="card-excerpt">{{ .Summary }}</p>
+          <div class="card-footer">
+            <a href="{{ .RelPermalink }}" class="card-link">
+              View Details
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+  {{ end }}
+</main>
+{{ end }}

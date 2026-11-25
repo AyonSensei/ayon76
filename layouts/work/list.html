@@ -1,0 +1,81 @@
+{{ define "main" }}
+<main class="site-container work-page-main" id="workPageMain">
+  <header class="work-hero-header">
+    <div class="work-ambient-glow" aria-hidden="true"></div>
+    <div class="work-header-badge">
+      <span class="work-badge-dot"></span>
+      <span class="work-badge-text">PROJECTS &middot; 4 FEATURED BUILDS</span>
+    </div>
+    <div class="work-eyebrow">
+      <span>Games</span><span class="eyebrow-sep">&middot;</span>
+      <span>Software</span><span class="eyebrow-sep">&middot;</span>
+      <span>Web</span>
+    </div>
+    <h1 class="work-page-title">Selected Projects</h1>
+    <p class="work-page-lead">A collection of things I have built: a game project, a C inventory system, and two portfolio websites.</p>
+  </header>
+
+  <section class="work-grid-section" aria-label="Selected projects">
+    <div class="work-grid">
+      {{ range hugo.Data.projects.projects }}
+      <article class="work-card reveal-work-card" tabindex="0" id="work-card-{{ .index }}">
+        <div class="work-card-top-accent" aria-hidden="true"></div>
+        <div class="work-card-media-slot">
+          <div class="work-photo-frame">
+            <div class="work-media-wrap">
+              {{ if .video }}
+              <video class="work-media-img work-media-video" muted playsinline loop preload="metadata" poster="{{ .image }}" aria-label="{{ .image_alt }}" controls>
+                <source src="{{ .video }}" type="video/mp4">
+                Your browser does not support the video element.
+              </video>
+              {{ else }}
+              <img src="{{ .image }}" alt="{{ .image_alt }}" width="640" height="400" loading="lazy" class="work-media-img">
+              {{ end }}
+              <div class="work-media-vignette" aria-hidden="true"></div>
+            </div>
+            <div class="work-caption-bar">
+              <span class="work-legend">{{ .category }}</span>
+              <span class="work-status-tag">{{ .status }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card-content">
+          <header class="work-card-header">
+            <div class="work-meta-row">
+              <span class="work-meta-badge">{{ .category }}</span>
+              <span class="work-meta-sub">{{ .status }}</span>
+              <span class="work-index-num">{{ .index }}</span>
+            </div>
+            <h2 class="work-card-title"><span class="title-accent-mark" aria-hidden="true">&sect;</span>{{ .title }}</h2>
+          </header>
+          <div class="work-card-description">
+            <p class="work-desc-lead">{{ .lead }}</p>
+            <p class="work-desc-body">{{ .description }}</p>
+          </div>
+          <footer class="work-card-footer">
+            <div class="work-tags">
+              {{ range .tags }}<span class="work-tag">{{ . }}</span>{{ end }}
+            </div>
+            <a class="card-link" href="{{ .link }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; margin-top:1.25rem;">
+              {{ .link_label }} &rarr;
+            </a>
+          </footer>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <footer class="work-coda reveal-work-card">
+    <div class="work-coda-card">
+      <div class="coda-accent-mark">&sect;</div>
+      <blockquote class="coda-quote">More projects will join this collection as I build and refine them.</blockquote>
+      <div class="coda-subtext">Tahsin R. Ayon &middot; Selected Work</div>
+      <div class="coda-nav-actions">
+        <a href="/contact/" class="btn-cinematic btn-primary"><span>Get in Touch</span></a>
+        <a href="/about/" class="btn-cinematic btn-ghost"><span>About Me</span></a>
+      </div>
+    </div>
+  </footer>
+</main>
+{{ end }}

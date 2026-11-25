@@ -1,0 +1,40 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3 class="footer-title">Tahsin R. Ayon</h3>
+      <p class="footer-tagline">
+        Computer Science &amp; Engineering student at Daffodil International University, building projects and growing through hands-on learning.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Portfolio</h4>
+      <ul class="footer-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/journey/">Education</a></li>
+        <li><a href="/work/">Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Explore</h4>
+      <ul class="footer-links">
+        <li><a href="/hobbies/">Interests</a></li>
+        <li><a href="/memories/">Visual Journal</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>
+      &copy; {{ now.Format "2006" }} Tahsin R. Ayon &middot; Portfolio
+    </div>
+    <div class="footer-meta">
+      <span class="archival-pill">
+        <span class="indicator-dot"></span>
+        {{ if .IsHome }}Status: Preserving{{ else }}Based in Dhaka, Bangladesh{{ end }}
+      </span>
+    </div>
+  </div>
+</footer>

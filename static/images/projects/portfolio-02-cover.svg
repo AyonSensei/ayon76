@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs><linearGradient id="bg2" x2="1" y2="1"><stop stop-color="#121a20"/><stop offset="1" stop-color="#08090d"/></linearGradient><radialGradient id="glow2"><stop stop-color="#537a9d" stop-opacity=".23"/><stop offset="1" stop-color="#08090d" stop-opacity="0"/></radialGradient></defs>
+  <rect width="640" height="400" fill="url(#bg2)"/><rect width="640" height="400" fill="url(#glow2)"/>
+  <rect x="86" y="54" width="468" height="270" rx="10" fill="#0b0d12" stroke="#343a48"/>
+  <path d="M96 54h448a10 10 0 0 1 10 10v25H86V64a10 10 0 0 1 10-10" fill="#171b24"/>
+  <circle cx="106" cy="72" r="4" fill="#dc6470"/><circle cx="121" cy="72" r="4" fill="#d5aa5b"/><circle cx="136" cy="72" r="4" fill="#55b89b"/>
+  <rect x="206" y="66" width="225" height="12" rx="6" fill="#282d37"/>
+  <text x="320" y="157" text-anchor="middle" fill="#f0eee9" font-family="Georgia,serif" font-size="32" letter-spacing="3">PORTFOLIO 02</text>
+  <path d="M235 180h170" stroke="#6b9ab9" stroke-width="2"/>
+  <text x="320" y="215" text-anchor="middle" fill="#aeb3c0" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">WEB DESIGN PROJECT</text>
+  <text x="320" y="279" text-anchor="middle" fill="#84b4d4" font-family="monospace" font-size="11" letter-spacing="2">SOURCE ON GITHUB</text>
+</svg>

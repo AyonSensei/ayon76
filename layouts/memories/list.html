@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="site-container">
+  <header class="section-header">
+    <div class="section-eyebrow">Selected Moments &middot; Personal Perspective</div>
+    <h1 class="section-title">Visual Journal</h1>
+    <p class="section-description">A personal space for photographs, places, and moments that offer a little more context about the person behind this portfolio.</p>
+  </header>
+  <div class="markdown-body" style="max-width: var(--container-narrow); margin: 0 auto 3rem;">{{ .Content }}</div>
+  <div class="archive-grid">
+    <article class="archive-card"><div class="card-media"><img src="/images/20260513_060925.jpg" alt="A personal photograph from Tahsin R. Ayon's collection" loading="lazy" data-lightbox="true"></div><div class="card-body"><div class="card-meta"><span>PERSONAL PHOTOGRAPH</span></div><h2 class="card-title">A Moment in Time</h2><p class="card-excerpt">A photograph from my personal collection. The image adds a personal note alongside my studies and creative work.</p></div></article>
+    <article class="archive-card"><div class="card-media"><img src="/images/20260513_213232.jpg" alt="A personal photograph from Tahsin R. Ayon's collection" loading="lazy" data-lightbox="true"></div><div class="card-body"><div class="card-meta"><span>PERSONAL PHOTOGRAPH</span></div><h2 class="card-title">Places &amp; Perspectives</h2><p class="card-excerpt">The places I visit and the details I notice are part of what inspires me beyond the screen.</p></div></article>
+    <article class="archive-card"><div class="card-media"><img src="/images/everyday-details-friends.png" alt="Tahsin R. Ayon sharing a dressed-up moment with university friends" loading="lazy" data-lightbox="true"></div><div class="card-body"><div class="card-meta"><span>PERSONAL PHOTOGRAPH</span></div><h2 class="card-title">Everyday Details</h2><p class="card-excerpt">A shared moment with university friends, dressed up for the day—an ordinary gathering that became a memory worth keeping.</p></div></article>
+    <article class="archive-card"><div class="card-media"><img src="/images/IMG_20260915_122933.jpg" alt="A personal photograph from Tahsin R. Ayon's collection" loading="lazy" data-lightbox="true"></div><div class="card-body"><div class="card-meta"><span>PERSONAL PHOTOGRAPH</span></div><h2 class="card-title">A Personal Collection</h2><p class="card-excerpt">A few selected images offer a glimpse into places and experiences that matter to me.</p></div></article>
+  </div>
+</main>
+{{ end }}
