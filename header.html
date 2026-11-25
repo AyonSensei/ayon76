@@ -1,0 +1,30 @@
+<header class="site-header">
+  <div class="header-inner">
+    <div class="nav-wrapper">
+      <nav class="primary-nav" id="primaryNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+            <li class="nav-item">
+              <a href="{{ .URL }}" data-onepage-target="{{ if eq .Identifier "home" }}#heroSection{{ else if eq .Identifier "about" }}#onepage-about{{ else if eq .Identifier "journey" }}#onepage-education{{ else if eq .Identifier "work" }}#onepage-projects{{ else if eq .Identifier "hobbies" }}#onepage-interests{{ else if eq .Identifier "memories" }}#onepage-journal{{ else if eq .Identifier "contact" }}#onepage-contact{{ end }}" class="nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.RelPermalink .URL) (eq (strings.TrimRight "/" $currentPage.RelPermalink) (strings.TrimRight "/" .URL)) }} is-active{{ end }}">
+                {{ if $.IsHome }}{{ .Name }}{{ else }}{{ if eq .Identifier "home" }}HOME{{ else if eq .Identifier "about" }}ABOUT{{ else if eq .Identifier "journey" }}EDUCATION{{ else if eq .Identifier "work" }}PROJECTS{{ else if eq .Identifier "hobbies" }}INTERESTS{{ else if eq .Identifier "memories" }}VISUAL JOURNAL{{ else if eq .Identifier "contact" }}CONTACT{{ else }}{{ .Name }}{{ end }}{{ end }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <a href="/about/" class="header-profile" aria-label="About Tahsin Ayon">
+      <img src="/images/tahsin-profile.jpg" alt="" width="36" height="36">
+      <span>Tahsin Ayon</span>
+    </a>
+  </div>
+</header>

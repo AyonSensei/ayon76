@@ -1,0 +1,57 @@
+baseURL = "/"
+locale = "en-us"
+title = "Tahsin R. Ayon | Portfolio"
+enableRobotsTXT = true
+summaryLength = 30
+
+[params]
+  description = "The portfolio of Tahsin R. Ayon, a Computer Science and Engineering student at Daffodil International University, sharing projects, interests, and selected moments."
+  author = "Tahsin R. Ayon"
+  tagline = "Computer Science student · Projects, learning, and interests"
+  establishedYear = "2026"
+  accentColor = "#9b2c3b"
+  themeMode = "cinematic-dark"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "HOME"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "ABOUT"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    identifier = "journey"
+    name = "EDUCATION"
+    url = "/journey/"
+    weight = 30
+  [[menu.main]]
+    identifier = "work"
+    name = "PROJECTS"
+    url = "/work/"
+    weight = 40
+  [[menu.main]]
+    identifier = "hobbies"
+    name = "INTERESTS"
+    url = "/hobbies/"
+    weight = 50
+  [[menu.main]]
+    identifier = "memories"
+    name = "VISUAL JOURNAL"
+    url = "/memories/"
+    weight = 60
+  [[menu.main]]
+    identifier = "contact"
+    name = "CONTACT"
+    url = "/contact/"
+    weight = 70
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"

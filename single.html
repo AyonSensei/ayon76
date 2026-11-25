@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main class="site-container-narrow">
+  <article class="single-archive-entry">
+    <header class="section-header">
+      <div class="section-eyebrow">
+        <a href="{{ .Parent.RelPermalink }}" style="color: inherit;">&larr; Back to {{ .Parent.Title }}</a>
+      </div>
+      <h1 class="section-title">{{ .Title }}</h1>
+      <div class="card-meta" style="margin-top: 1rem;">
+        <span>{{ .Date.Format "January 02, 2006" }}</span>
+        {{ with .Params.location }}
+          <span class="meta-divider"></span>
+          <span>{{ . }}</span>
+        {{ end }}
+      </div>
+    </header>
+
+    {{ with .Params.featured_image }}
+      <div class="photo-frame" style="margin-bottom: 2.5rem;">
+        <img src="{{ . }}" alt="{{ $.Title }}" data-lightbox="true" data-caption="{{ $.Title }}">
+      </div>
+    {{ end }}
+
+    <div class="markdown-body">
+      {{ .Content }}
+    </div>
+
+    <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between;">
+      {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="card-link">&larr; Previous: {{ .Title }}</a>
+      {{ else }}
+        <span></span>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="card-link">Next: {{ .Title }} &rarr;</a>
+      {{ end }}
+    </div>
+  </article>
+</main>
+{{ end }}

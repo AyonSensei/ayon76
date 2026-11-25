@@ -1,0 +1,13 @@
+{
+  "name": "before-it-fades",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "hugo server --bind=0.0.0.0 --port=3000 --appendPort=false --buildDrafts --buildFuture",
+    "build": "hugo --minify -d dist",
+    "lint": "hugo --renderToMemory"
+  },
+  "devDependencies": {
+    "hugo-bin": "^0.163.0"
+  }
+}
